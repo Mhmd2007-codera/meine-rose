@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply Great Vibes font */
+.gv {
+  font-family: "Great Vibes", cursive !important;
+}
+
+/* Pink background */
+body {
+  background: #ffb6d9;
+  overflow: hidden;
+}
+
+/* Floating Emoji Hearts */
+.emoji-heart {
+  position: fixed;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatUp linear forwards;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.8);
+    opacity: 0;
+  }
+}
+
+.screen {
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+.fade-in { animation: fadeIn 1.2s ease; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.slide-down { animation: slideDown 1s ease; }
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pop-in { animation: popIn 1.2s ease; }
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.glow-in { animation: glowIn 1.5s ease; }
+@keyframes glowIn {
+  from { opacity: 0; filter: blur(10px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+/* 3D Rose */
+.rose-3d {
+  width: 150px;
+  height: 200px;
+  margin: 40px auto;
+  position: relative;
+  cursor: pointer;
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.petal {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #ff4fa3, #b8006a);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 12px rgba(255, 0, 120, 0.6));
+}
+
+.layer1 { top: 0; left: 30px; }
+.layer2 { top: 25px; left: 0; }
+.layer3 { top: 25px; right: 0; }
+.layer4 { top: 55px; left: 30px; }
+
+.center {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #ff99cc, #ff4fa3);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 0, 120, 0.7);
+}
+
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+  width: 10px;
+  height: 110px;
+  background: linear-gradient(#2f8f3b, #1f5f28);
+  border-radius: 10px;
+}
+
+.leaf {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: radial-gradient(circle, #3fa84a, #1f5f28);
+  border-radius: 40px 0;
+}
+
+.leaf1 { bottom: 50px; left: 80px; transform: rotate(20deg); }
+.leaf2 { bottom: 30px; left: 20px; transform: rotate(-20deg); }
+
+/* Cute text */
+.cute-text {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.6s ease;
+  color: #6b2b4b;
+  font-size: 1.8rem;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 20px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff7bb8, #ff4fa3);
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s ease;
+}
+
+.btn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Paper */
+.paper {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  min-height: 260px;
+}
+
+.paper-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #c0397e;
+  white-space: pre-wrap;
+}
+
+/* Final screen */
+.final-box {
+  background: rgba(255,255,255,0.7);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  backdrop-filter: blur(6px);
+}
+
+.final-text {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #ff4fa3, #ff99cc, #ff7bb8);
+  -webkit-background-clip: text;
+  color: transparent;
+  white-space: pre-wrap;
+}
+
+.final-emojis {
+  font-size: 2rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
